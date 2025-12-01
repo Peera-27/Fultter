@@ -13,11 +13,14 @@ class InputScreen extends StatefulWidget {
 
 class _InputScreenState extends State<InputScreen> {
   var isMale = true;
-  void toggleGender() {
-    setState(() {
+ Null Function()  toggleGender(bool formale) {
+  return (){
+    if(formale == isMale) return;
+      setState(() {
    isMale = !isMale;
       
     });
+  };
   }
   @override
   Widget build(BuildContext context) {
@@ -32,8 +35,8 @@ class _InputScreenState extends State<InputScreen> {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: GestureDetector(child: BgCard(child: BgcardGender(ismale: true,isactive: isMale),callbackFn: toggleGender,))),
-                Expanded(child: BgCard(child: BgcardGender(ismale: false,isactive: !isMale),callbackFn: toggleGender,))],
+                Expanded(child: GestureDetector(child: BgCard(callbackFn: toggleGender(true),child: BgcardGender(ismale: true,isactive: isMale),))),
+                Expanded(child: BgCard(callbackFn: toggleGender(false),child: BgcardGender(ismale: false,isactive: !isMale),))],
                       ),
           ),
           Row(children: [Expanded(child: BgCard())]),
