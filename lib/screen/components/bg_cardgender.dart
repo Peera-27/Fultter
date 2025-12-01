@@ -7,6 +7,8 @@ class BgcardGender extends StatelessWidget {
 bool isactive;
   double? iconsize;
   double? fontsize;
+  
+
 
   BgcardGender({
     super.key,
@@ -14,6 +16,7 @@ bool isactive;
     this.isactive = true,
     this.iconsize = 60,
     this.fontsize = 18,
+   
   });
 
   @override
