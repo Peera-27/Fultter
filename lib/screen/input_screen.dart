@@ -24,6 +24,21 @@ class _InputScreenState extends State<InputScreen> {
       });
     };
   }
+  Null Function() UpdateWeight(int value) {
+    return () {
+      setState(() {
+        inputweight += value;
+      });
+    };
+  }
+ 
+  Null Function() UpdateAge(int value) {
+    return () {
+      setState(() {
+        inputage += value;
+      });
+    };
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,8 +89,8 @@ class _InputScreenState extends State<InputScreen> {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: BgCard(child: bgCardweightandheight(value: inputweight,))),
-                Expanded(child: BgCard(child: bgCardweightandheight(labetText: "Age", value: inputage,),)),
+                Expanded(child: BgCard(child: bgCardweightandheight(value: inputweight,onPlus: UpdateWeight(1),onMinus: UpdateWeight(-1),))),
+                Expanded(child: BgCard(child: bgCardweightandheight(labetText: "Age", value: inputage,onPlus: UpdateAge(1),onMinus: UpdateAge(-1),),)),
               ],
             ),
           ),
