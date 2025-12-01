@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:w3/screen/components/b_gcard_height.dart';
 import 'package:w3/screen/components/bg_card.dart';
 import 'package:w3/screen/components/bg_cardgender.dart';
 
@@ -13,15 +14,15 @@ class InputScreen extends StatefulWidget {
 
 class _InputScreenState extends State<InputScreen> {
   var isMale = true;
- Null Function()  toggleGender(bool formale) {
-  return (){
-    if(formale == isMale) return;
+  Null Function() toggleGender(bool formale) {
+    return () {
+      if (formale == isMale) return;
       setState(() {
-   isMale = !isMale;
-      
-    });
-  };
+        isMale = !isMale;
+      });
+    };
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,11 +36,26 @@ class _InputScreenState extends State<InputScreen> {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: GestureDetector(child: BgCard(callbackFn: toggleGender(true),child: BgcardGender(ismale: true,isactive: isMale),))),
-                Expanded(child: BgCard(callbackFn: toggleGender(false),child: BgcardGender(ismale: false,isactive: !isMale),))],
-                      ),
+                Expanded(
+                  child: GestureDetector(
+                    child: BgCard(
+                      callbackFn: toggleGender(true),
+                      child: BgcardGender(ismale: true, isactive: isMale),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: BgCard(
+                    callbackFn: toggleGender(false),
+                    child: BgcardGender(ismale: false, isactive: !isMale),
+                  ),
+                ),
+              ],
+            ),
           ),
-          Row(children: [Expanded(child: BgCard())]),
+          Row(
+            children: [Expanded(child: BgCard(child: BGcardHeight()))],
+          ),
           Expanded(
             child: Row(
               children: [
