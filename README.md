@@ -10,11 +10,7 @@ A Flutter application for calculating Body Mass Index (BMI) based on user input 
 - Dark theme with custom colors
 - Responsive UI with card-based components
 
-## Screenshots
 
-<!-- Add screenshots here -->
-![Input Screen](screenshots/input_screen.png)
-![Result Screen](screenshots/result_screen.png)
 
 ## Installation
 
@@ -22,7 +18,7 @@ A Flutter application for calculating Body Mass Index (BMI) based on user input 
 
 2. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/w3.git
+   git clone https://github.com/Peera-27/Fultter.git
    cd w3
    ```
 
@@ -60,6 +56,3 @@ A Flutter application for calculating Body Mass Index (BMI) based on user input 
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
