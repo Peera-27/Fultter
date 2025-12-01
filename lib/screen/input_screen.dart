@@ -14,6 +14,7 @@ class InputScreen extends StatefulWidget {
 
 class _InputScreenState extends State<InputScreen> {
   var isMale = true;
+  var inputheight = 65;
   Null Function() toggleGender(bool formale) {
     return () {
       if (formale == isMale) return;
@@ -54,7 +55,15 @@ class _InputScreenState extends State<InputScreen> {
             ),
           ),
           Row(
-            children: [Expanded(child: BgCard(child: BGcardHeight()))],
+            children: [
+              Expanded(
+                child: BgCard(child: BGcardHeight(value: inputheight,onchanged: (value)=>{
+                  setState(() {
+                    inputheight = value.toInt();
+                  })
+                },)),
+              ),
+            ],
           ),
           Expanded(
             child: Row(

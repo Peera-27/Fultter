@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 
 class BGcardHeight extends StatelessWidget {
   ValueChanged<double>? onchanged;
+  
+   final int value;
 
    BGcardHeight({
     super.key,
     this.onchanged,
+    required this.value,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {  
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -19,15 +22,15 @@ class BGcardHeight extends StatelessWidget {
           textBaseline: TextBaseline.alphabetic,
           crossAxisAlignment: CrossAxisAlignment.baseline,
           children: [ 
-            Text("67", style: TextStyle(fontSize: 70)),
+            Text("$value", style: TextStyle(fontSize: 70,fontWeight: FontWeight.w500)),
             Text("cm"),
           ],
         ),
-        Expanded(child:   Slider(
-          value: 100,
-          max: 220,
-          min: 80,
-          onChanged: onchanged,
+        Expanded(child:Slider(
+          value:  value.toDouble(),
+          max: 250,
+          min: 50,
+          onChanged:onchanged,
         )),
       ],
     );
