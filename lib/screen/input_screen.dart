@@ -3,6 +3,7 @@ import 'package:w3/screen/components/b_gcard_height.dart';
 import 'package:w3/screen/components/bg_card.dart';
 import 'package:w3/screen/components/bg_cardgender.dart';
 import 'package:w3/screen/components/bg_cardweightandheight.dart';
+import 'package:w3/screen/components/pink_button.dart';
 import 'package:w3/screen/result_screen.dart';
 
 class InputScreen extends StatefulWidget {
@@ -95,15 +96,9 @@ class _InputScreenState extends State<InputScreen> {
               ],
             ),
           ),
-          Container(
-            color: Color(0xffeb1555),
-            margin: EdgeInsets.only(top: 10),
-            height: 100,
-            width: double.infinity,
-            child: TextButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> const ResultScreen()));
-            }, child: Text("Calculate Bmi",style: TextStyle(fontSize: 30),)),
-          ),
+          pink_button(label: "Calculate Bmi", onPressed: () => {
+         Navigator.push(context, MaterialPageRoute(builder: (context)=> const ResultScreen()))
+          },),
         ],
       ),
     );

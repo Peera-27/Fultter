@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:w3/screen/components/pink_button.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key});
@@ -9,7 +10,9 @@ class ResultScreen extends StatelessWidget {
         title: Text('Bmi Calculator'),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       ),
-      body: Text("data"),
+      body: pink_button(label: "Re-Calculate My Bmi", onPressed: ()=>{
+        Navigator.pop(context)
+      }),
     );
   }
 }
