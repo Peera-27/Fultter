@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:w3/bmi.dart';
 import 'package:w3/screen/components/bg_card.dart';
 import 'package:w3/screen/components/pink_button.dart';
 
@@ -9,6 +10,7 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var (bmi, catagory, description) = Bmi.calculate(WeightInKg, heightInCm);
     return Scaffold(
       appBar: AppBar(
         title: Text('Bmi Calculator'),
@@ -27,7 +29,7 @@ class ResultScreen extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      "Normal",
+                      catagory,
                       style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
@@ -37,7 +39,7 @@ class ResultScreen extends StatelessWidget {
                   ),
                   Center(
                     child: Text(
-                      "5.0",
+                      bmi.toString(),
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold
@@ -46,7 +48,7 @@ class ResultScreen extends StatelessWidget {
                   ),
                   Center(
                     child: Text(
-                      "You have a normal body weight. 😍❤️",
+                      description,
                       style: TextStyle(
                         fontSize: 20,
                       ),
