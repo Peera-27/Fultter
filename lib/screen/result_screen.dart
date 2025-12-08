@@ -13,7 +13,7 @@ class ResultScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(child: Text("Result")),
+          Expanded(child: Text("Result 😭",style: TextStyle(fontSize: 30),)),
           pink_button(label: "Re-Calculate My Bmi", onPressed: ()=>{
             Navigator.pop(context)
           }),
