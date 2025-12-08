@@ -10,10 +10,14 @@ class Bmi {
     
    double bmi = WeightInKg / pow((heightInCm / 100), 2);
 if (bmi <16) {
-  catagory = "Severly Underweight";
+  catagory = "serve thinness";
   description = "You need to eat more nutritious food";
-} else if (bmi >=16 && bmi <18.5) {
-  catagory = "Underweight";
+} else if (bmi >=16 && bmi <=17) {
+  catagory = "moderate thinness";
+  description = "You need to eat more nutritious food";
+}
+else if (bmi >=17 && bmi <18.5) {
+  catagory = "Mild thinness";
   description = "You need to eat more nutritious food";
 } else if (bmi >=18.5 && bmi <25) {
   catagory = "Normal";
