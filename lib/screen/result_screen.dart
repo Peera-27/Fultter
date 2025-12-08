@@ -3,7 +3,9 @@ import 'package:w3/screen/components/bg_card.dart';
 import 'package:w3/screen/components/pink_button.dart';
 
 class ResultScreen extends StatelessWidget {
-  const ResultScreen({super.key});
+  final double WeightInKg;
+  final double heightInCm;
+  const ResultScreen({super.key, required this.WeightInKg, required this.heightInCm});
 
   @override
   Widget build(BuildContext context) {

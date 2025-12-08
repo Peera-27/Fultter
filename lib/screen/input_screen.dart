@@ -97,7 +97,7 @@ class _InputScreenState extends State<InputScreen> {
             ),
           ),
           pink_button(label: "Calculate Bmi", onPressed: () => {
-         Navigator.push(context, MaterialPageRoute(builder: (context)=> const ResultScreen()))
+         Navigator.push(context, MaterialPageRoute(builder: (context)=> ResultScreen(WeightInKg: inputweight.toDouble(), heightInCm: inputheight.toDouble())))
           },),
         ],
       ),
