@@ -10,9 +10,15 @@ class ResultScreen extends StatelessWidget {
         title: Text('Bmi Calculator'),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       ),
-      body: pink_button(label: "Re-Calculate My Bmi", onPressed: ()=>{
-        Navigator.pop(context)
-      }),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(child: Text("Result")),
+          pink_button(label: "Re-Calculate My Bmi", onPressed: ()=>{
+            Navigator.pop(context)
+          }),
+        ],
+      ),
     );
   }
 }
