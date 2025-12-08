@@ -17,7 +17,7 @@ class BgCard extends StatelessWidget {
     return GestureDetector(
       onTap: callbackFn,
       child: Container(
-        width: 160,
+        // width: 160,
         height: 180,
         margin: EdgeInsets.all(15),
         decoration: BoxDecoration(
