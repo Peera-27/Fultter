@@ -22,7 +22,35 @@ class ResultScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [Text("data"), Text("data"), Text("data")],
+                children: [
+                  Center(
+                    child: Text(
+                      "Normal",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.greenAccent,
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Text(
+                      "5.0",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Text(
+                      "You have a normal body weight. 😍❤️",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
