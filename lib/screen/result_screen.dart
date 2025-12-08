@@ -39,7 +39,7 @@ class ResultScreen extends StatelessWidget {
                   ),
                   Center(
                     child: Text(
-                      bmi.toString(),
+                      bmi.toStringAsFixed(2),
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold
