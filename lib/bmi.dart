@@ -25,13 +25,13 @@ else if (bmi >=17 && bmi <18.5) {
 } else if (bmi >=25 && bmi <30) {
   catagory = "Overweight";
   description = "You need to workout more!";
-} else if (bmi >=30) {
+} else if (bmi >=30 && bmi <=35) {
   catagory = "Obese I";
   description = "Please consult a doctor!";
-} else if (bmi >=35) {
+} else if (bmi >=35 && bmi <40) {
   catagory = "Obese II";
-  description = "Please consult a doctor!";
-} else if (bmi >=40) {
+  description = "Please consult a doctor!🩻";
+} else if (bmi >=40 ) {
   catagory = "Obese III";
   description = "Please consult a doctor!";
 }
